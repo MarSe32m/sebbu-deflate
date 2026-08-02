@@ -45,7 +45,7 @@ Add SebbuDeflate as a dependency in your `Package.swift`:
 dependencies: [
     .package(
         url: "https://github.com/MarSe32m/sebbu-deflate.git",
-        from: "0.1.0"
+        from: "1.25.0"
     )
 ]
 ```
