@@ -4,6 +4,12 @@ import PackageDescription
 
 let package = Package(
     name: "sebbu-deflate",
+    platforms: [
+        .macOS(.v26),
+        .iOS(.v26),
+        .watchOS(.v26),
+        .tvOS(.v26)
+    ],
     products: [
         .library(
             name: "SebbuDeflate",
