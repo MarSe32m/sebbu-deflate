@@ -1,0 +1,4 @@
+module CLibDeflate {
+    header "include.h"
+    export *
+}
