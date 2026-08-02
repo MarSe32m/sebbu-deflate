@@ -18,7 +18,7 @@ import CLibDeflate
 ///
 /// These methods decompress only the first stream contained in the input. In
 /// particular, concatenated gzip members are not decompressed automatically.
-public struct DeflateDecompressor: ~Copyable, ~Sendable {
+public struct DeflateDecompressor: ~Copyable {
     @usableFromInline
     internal let decompressor: OpaquePointer
 

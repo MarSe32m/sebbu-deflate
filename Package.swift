@@ -22,9 +22,6 @@ let package = Package(
             name: "SebbuDeflate",
             dependencies: [
                 "CLibDeflate"
-            ],
-            swiftSettings: [
-                .enableExperimentalFeature("TildeSendable")
             ]
         ),
         .target(

@@ -12,7 +12,7 @@ import CLibDeflate
 ///
 /// `DeflateCompressor` performs whole-buffer compression and does not provide a
 /// streaming compression API.
-public struct DeflateCompressor: ~Copyable, ~Sendable {
+public struct DeflateCompressor: ~Copyable {
     @usableFromInline
     internal let compressor: OpaquePointer
 
