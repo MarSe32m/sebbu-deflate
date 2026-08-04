@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Sebastian Toivonen
+// SPDX-License-Identifier: MIT
+
 import CLibDeflate
 
 /// A reusable whole-buffer decompressor for raw DEFLATE, zlib and gzip data.

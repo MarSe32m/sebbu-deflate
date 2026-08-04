@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Sebastian Toivonen
+// SPDX-License-Identifier: MIT
+
 /// A compression level used by libdeflate.
 ///
 /// Valid compression levels range from `0` through `12`. Level `0` emits

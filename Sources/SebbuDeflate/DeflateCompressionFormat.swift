@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Sebastian Toivonen
+// SPDX-License-Identifier: MIT
+
 /// A format used to encode DEFLATE-compressed data.
 ///
 /// All supported formats use the DEFLATE compression algorithm. They differ in

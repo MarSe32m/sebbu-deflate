@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Sebastian Toivonen
+// SPDX-License-Identifier: MIT
+
 /// An error produced by a compression or decompression operation.
 public enum DeflateError: Sendable, Error {
     /// The compressed input is invalid, corrupt, or unsupported.
