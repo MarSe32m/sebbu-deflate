@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 import Testing
-@testable import SebbuDeflate
+import SebbuDeflate
 
 enum ExpectedDeflateError {
     case badData

@@ -7,7 +7,7 @@ import FoundationEssentials
 import Foundation
 #endif
 import Testing
-@testable import SebbuDeflateFoundation
+import SebbuDeflateFoundation
 
 private struct NamedDataPayload: Sendable {
     let name: String

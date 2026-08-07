@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 import Testing
-@testable import SebbuDeflate
+import SebbuDeflate
 
 private struct NamedPayload: Sendable {
     let name: String

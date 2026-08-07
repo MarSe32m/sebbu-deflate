@@ -35,16 +35,16 @@ jobs:
         run: swift --version
 
       - name: Build (debug)
-        run: swift build --build-tests
+        run: swift build
 
       - name: Test (debug)
-        run: swift test --skip-build
+        run: swift test
 
       - name: Build (release)
-        run: swift build -c release --build-tests
+        run: swift build -c release
 
       - name: Test (release)
-        run: swift test -c release --skip-build
+        run: swift test -c release
 
   static-linux:
     name: Static Linux (${{ matrix.sdk }})
