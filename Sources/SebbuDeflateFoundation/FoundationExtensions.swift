@@ -27,13 +27,13 @@ public extension DeflateCompressor {
         format: DeflateCompressionFormat = .zlib,
         bytes input: Data
     ) throws(DeflateError) -> Data {
-        #if swift(<6.4)
-        return try Data(compress(format: format, bytes: [UInt8](input)))
-        #else
+        #if canImport(FoundationEssentials) && swift(>=6.4)
         let bound = compressedByteCountBound(format: format, byteCount: input.count)
-        return try Data(rawCapacity: bound) { (output: inout OutputRawSpan) throws(DeflateError) -> Void in 
+        return try Data(rawCapacity: bound) { (output: inout OutputRawSpan) throws(DeflateError) -> Void in
             try compress(format: format, bytes: input.bytes, into: &output)
         }
+        #else
+        return try Data(compress(format: format, bytes: [UInt8](input)))
         #endif
     }
 
@@ -149,12 +149,12 @@ public extension DeflateDecompressor {
         maximumSize: Int
     ) throws(DeflateError) -> Data {
         precondition(maximumSize >= 0)
-        #if swift(<6.4)
-        return try .init(decompress(format: format, bytes: [UInt8](input), maximumSize: maximumSize))
-        #else
-        return try .init(rawCapacity: maximumSize) { (output: inout OutputRawSpan) throws(DeflateError) -> Void in 
+        #if canImport(FoundationEssentials) && swift(>=6.4)
+        return try .init(rawCapacity: maximumSize) { (output: inout OutputRawSpan) throws(DeflateError) -> Void in
             try decompress(format: format, bytes: input.bytes, into: &output)
         }
+        #else
+        return try .init(decompress(format: format, bytes: [UInt8](input), maximumSize: maximumSize))
         #endif
     }
 
