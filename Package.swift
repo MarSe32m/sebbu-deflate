@@ -18,6 +18,10 @@ let package = Package(
         .library(
             name: "CLibDeflate", 
             targets: ["CLibDeflate"]
+        ),
+        .library(
+            name: "SebbuDeflateFoundation", 
+            targets: ["SebbuDeflateFoundation"]
         )
     ],
     targets: [
